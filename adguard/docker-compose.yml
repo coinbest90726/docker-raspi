@@ -13,3 +13,12 @@ services:
      volumes:
        - ./work:/opt/adguardhome/work
        - ./conf:/opt/adguardhome/conf
+     networks:
+       containers:
+         ipv4_address: 172.20.0.7
+
+networks:
+  containers:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
